@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     {
         if (rb.velocity.x <= 0.01 && rb.velocity.x >=-0.01 && rb.velocity.y <= 0.01 && rb.velocity.y >= -0.01)
         {
-            if (Input.GetKeyDown(KeyCode.UpArrow)) //up arrow
+            if (Input.GetKeyDown(KeyCode.UpArrow)) //위 방향키
             {
                 rb.AddForce(Vector2.up * speed, ForceMode2D.Impulse);
                 if (rb.velocity.y <= maxSpeed)
@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
                     rb.velocity = new Vector2(0, maxSpeed);
                 }
             }
-            if (Input.GetKeyDown(KeyCode.DownArrow)) //down arrow
+            if (Input.GetKeyDown(KeyCode.DownArrow)) //아래 방향키
             {
                 rb.AddForce(Vector2.up * -speed, ForceMode2D.Impulse);
                 if (rb.velocity.y <= maxSpeed)
@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
                     rb.velocity = new Vector2(0, -maxSpeed);
                 }
             }
-            if (Input.GetKeyDown(KeyCode.RightArrow)) //right arrow
+            if (Input.GetKeyDown(KeyCode.RightArrow)) //오른쪽 방향키
             {
                 rb.AddForce(Vector2.right * speed, ForceMode2D.Impulse);
                 if (rb.velocity.x <= maxSpeed)
@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
                     rb.velocity = new Vector2(maxSpeed, 0);
                 }
             }
-            if (Input.GetKeyDown(KeyCode.LeftArrow)) //left arrow
+            if (Input.GetKeyDown(KeyCode.LeftArrow)) //왼쪽 방향키
             {
                 rb.AddForce(Vector2.right * -speed, ForceMode2D.Impulse);
                 if (rb.velocity.x <= maxSpeed)
