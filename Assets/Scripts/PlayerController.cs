@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (rb.velocity.x <= 0.01 && rb.velocity.x >=-0.01 && rb.velocity.y <= 0.01 && rb.velocity.y >= -0.01)
+        if (rb.velocity.x <= 0.01 && rb.velocity.x >=-0.01 && rb.velocity.y <= 0.01 && rb.velocity.y >= -0.01) //이동
         {
             if (Input.GetKeyDown(KeyCode.UpArrow)) //위 방향키
             {
