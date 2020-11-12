@@ -1,12 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using Unity.Mathematics;
-using UnityEngine.SceneManagement;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class EnemyMaking : MonoBehaviour
 {
-    public GameObject Player;
+    public GameObject Enemy;
+    public float time;
 
     Vector3 StartPos;
     Quaternion StartRot;
@@ -16,9 +15,18 @@ public class GameManager : MonoBehaviour
         StartPos = GameObject.FindGameObjectWithTag("Start").transform.position;
         StartRot = GameObject.FindGameObjectWithTag("Start").transform.rotation;
     }
-    // Start is called before the first frame update
+    void Making()
+    {
+        Instantiate(Enemy, StartPos, StartRot);
+    }
+
     void Start()
     {
-        Instantiate(Player, StartPos, StartRot);    //플레이어 생성
+        Invoke("Making", time);
+    }
+
+    void Update()
+    {
+        
     }
 }

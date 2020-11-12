@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RigidCamera : MonoBehaviour
+public class PlayerTracing : MonoBehaviour
 {
 	public GameObject playerCam;
 
