@@ -8,6 +8,7 @@ TagManager:
   - Start
   - End
   - TracingEnemy
+  - Ground
   layers:
   - Default
   - TransparentFX
@@ -20,8 +21,8 @@ TagManager:
   - Ground
   - Player
   - Background
-  - 
-  - 
+  - Enemy
+  - Camera
   - 
   - 
   - 

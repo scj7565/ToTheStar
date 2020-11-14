@@ -15,10 +15,10 @@ public class GameManager : MonoBehaviour
     {
         StartPos = GameObject.FindGameObjectWithTag("Start").transform.position;
         StartRot = GameObject.FindGameObjectWithTag("Start").transform.rotation;
+        Instantiate(Player, StartPos, StartRot);
     }
     // Start is called before the first frame update
     void Start()
-    {
-        Instantiate(Player, StartPos, StartRot);    //플레이어 생성
+    {  //플레이어 생성
     }
 }

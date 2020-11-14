@@ -7,9 +7,8 @@ using TMPro;
 public class EnemyControl : MonoBehaviour
 {
     private Rigidbody2D prb;
-    public GameObject tracing;
     private List<Vector3> newPos;
-    public int dist;
+    public int frame;
 
     void Awake()
     {
@@ -26,7 +25,7 @@ public class EnemyControl : MonoBehaviour
     {
         prb = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
         newPos.Add(prb.transform.position);
-        if (newPos.Count > dist)    //플레이어 추격
+        if (newPos.Count > frame)    //플레이어 추격
         {
             transform.position = newPos[0];
             newPos.RemoveAt(0);

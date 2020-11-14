@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 
-public class HitTrap : MonoBehaviour
+public class Trap : MonoBehaviour
 {
 
     void OnTriggerEnter2D(Collider2D other) //플레이어 리셋

@@ -7,7 +7,6 @@ using System;
 public class SceneMove : MonoBehaviour
 {
     public int nextSceneNum;
-
     void OnTriggerEnter2D(Collider2D other) //씬 이동
     {
         if (other.gameObject.tag.Equals("Player"))
