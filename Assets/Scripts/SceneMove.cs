@@ -15,4 +15,11 @@ public class SceneMove : MonoBehaviour
             SceneManager.LoadScene(nextSceneNum,LoadSceneMode.Single);
         }
     }
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+    }
 }

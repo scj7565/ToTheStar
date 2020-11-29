@@ -6,7 +6,6 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D rb;
     public float speed;
-    public float maxSpeed;
 
     void Awake()
     {
@@ -19,35 +18,19 @@ public class PlayerController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.UpArrow)) //위 방향키
             {
-                rb.AddForce(Vector2.up * speed, ForceMode2D.Impulse);
-                if (rb.velocity.y <= maxSpeed)
-                {
-                    rb.velocity = new Vector2(0, maxSpeed);
-                }
+                rb.velocity = new Vector2(0, speed);
             }
             if (Input.GetKeyDown(KeyCode.DownArrow)) //아래 방향키
             {
-                rb.AddForce(Vector2.up * -speed, ForceMode2D.Impulse);
-                if (rb.velocity.y <= maxSpeed)
-                {
-                    rb.velocity = new Vector2(0, -maxSpeed);
-                }
+                rb.velocity = new Vector2(0, -speed);
             }
             if (Input.GetKeyDown(KeyCode.RightArrow)) //오른쪽 방향키
             {
-                rb.AddForce(Vector2.right * speed, ForceMode2D.Impulse);
-                if (rb.velocity.x <= maxSpeed)
-                {
-                    rb.velocity = new Vector2(maxSpeed, 0);
-                }
+                rb.velocity = new Vector2(speed, 0);
             }
             if (Input.GetKeyDown(KeyCode.LeftArrow)) //왼쪽 방향키
             {
-                rb.AddForce(Vector2.right * -speed, ForceMode2D.Impulse);
-                if (rb.velocity.x <= maxSpeed)
-                {
-                    rb.velocity = new Vector2(-maxSpeed, 0);
-                }
+                rb.velocity = new Vector2(-speed, 0);
             }
         }
     }

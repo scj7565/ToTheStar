@@ -86,7 +86,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7a4f1d2e5e9bb6499aabba28591957e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 196943391882282695, guid: 41e40283aca62f9488f28581640de8a5, type: 3}
+  target: {fileID: 0}
 --- !u!114 &3609108900587314108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99,4 +99,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0811ff7bf4169864a801f083a820a5b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCam: {fileID: 196943391882282695, guid: 41e40283aca62f9488f28581640de8a5, type: 3}
